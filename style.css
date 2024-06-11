@@ -9,10 +9,11 @@
   font-family: 'Poppins', sans-serif;
 }
 :root{
-  --bg-color: #080808;
-  --second-bg-color: #131313;
-  --text-color: #ffffff;
-  --main-color: #6495ed;
+--main-color: #6495ed;
+--complementary-color: #edc964;
+--bg-color: #d6e0f0;
+--second-bg-color: #b8c7e0;
+--text-color: #1f2d3d;
 }
 html{
   font-size: 60%;
@@ -331,11 +332,11 @@ span{
   margin: 0 0 10px;
   font-size: 20px;
   font-weight: 500;
-  color: white;
+  color: black;
 }
 .timeline-content p{
   font-size: 15px;
-  color: white;
+  color: black;
   line-height: 22px;
   font-weight: 300;
 }
@@ -356,7 +357,7 @@ span{
 }
 .projects h2{
   margin-bottom: 5rem;
-  color: white;
+  color: var(--text-color);
 }
 .projects-container{
   display: grid;
@@ -428,7 +429,7 @@ span{
 }
 .swiper .swiper-button-next, 
 .swiper .swiper-button-prev{
-  color: var(--main-color);
+  color: var(--bg-color);
   font-size: 1.5rem;
   @media (max-width: 768px){
     font-size: 1rem;
@@ -447,7 +448,6 @@ span{
 }
 .contact h2{
   margin-bottom: 3rem;
-  color: white;
 }
 .contact form{
   display: flex;
@@ -468,7 +468,7 @@ span{
   padding: 2.5rem;
   font-size: 1.8rem;
   color: var(--text-color);
-  background: var(--bg-color);
+  background: var(--second-bg-color);
   border-radius: 2rem;
   border: 2px solid var(--main-color);
   margin: 1.5rem 0;
@@ -536,14 +536,47 @@ span{
   color: white;
 }
 
+#backToTopBtn {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  display: none;
+  width: 40px;
+  height: 40px;
+  background-color: var(--main-color);
+  color: white;
+  text-align: center;
+  line-height: 20px;
+  font-size: 3rem;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 10px var(--main-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#backToTopBtn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px var(--main-color);
+}
+
 @media (max-width: 1285px){
   html{
     font-size: 55%;
   }
   .projects-container{
+    padding: 1rem;
     padding-bottom: 7rem;
-    grid-template-columns: repeat(2, 1fr);
-    margin: 0 5rem;
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+  }
+  .projects-box{
+    margin: 1rem;
+  }
+}
+@media (max-width: 1200px) {
+  .swiper {
+    max-width: 80rem;
+    height: auto;
   }
 }
 @media (max-width: 991px){
@@ -628,12 +661,6 @@ span{
     grid-template-columns: repeat(1, 1fr);
   }
 }
-@media (max-width: 1200px) {
-  .swiper {
-    max-width: 80rem;
-    height: auto;
-  }
-}
 @media (max-width: 768px) {
   .swiper {
     max-width: 60rem;
@@ -646,11 +673,18 @@ span{
     padding: 1rem;
     height: auto;
   }
+  .projects h4 {
+    font-size: 2.5rem;
+  }
+  
+  .projects p {
+    font-size: 1rem;
+  }
 }
 
 
 
-/* Reference
+/* References
   https: //www.youtube.com/watch?v=UqHILyzcULE : Video
   https: //swiperjs.com/get-started : Swiper
   https: //boxicons.com/?query= : Boxicons

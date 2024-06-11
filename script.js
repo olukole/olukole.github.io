@@ -42,3 +42,34 @@ window.onload = function() {
     },
   });
 }
+function downloadResume() {
+  const link = document.createElement('a');
+  link.href = 'https://github.com/olukole/olukole.github.io/raw/main/-Resume.pdf';
+  link.download = '-Resume.pdf';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+
+const form = document.getElementById('contactForm');
+form.addEventListener('submit', function(event) {
+  event.preventDefault();
+  alert("Apologies. The form is currently down.");
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  var backToTopBtn = document.getElementById("backToTopBtn");
+  window.addEventListener("scroll", function() {
+    if (window.scrollY > 100) {
+      backToTopBtn.style.display = "block";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
+  });
+  backToTopBtn.addEventListener("click", function() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+});
