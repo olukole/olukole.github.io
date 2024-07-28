@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7B7QV1RWB0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-7B7QV1RWB0');
+  </script>
+
   <meta charset="UTF-8">
   <meta name="viewport" 
   content="width=device-width, initial-scale=1.0">
@@ -71,8 +82,8 @@
         <div class="timeline-dot"></div>
           <div class="timeline-date">2022</div>
           <div class="timeline-content">
-            <h3>Trinity</h3>
-            <p>Worked at Trinity as an Email Automation Specialist Intern where i deepened my understanding of??</p>
+            <h3>Internship at Trinity</h3>
+            <p>Email Automation Specialist Intern</p>
           </div>
       </div>
 
@@ -80,10 +91,7 @@
         <div class="timeline-dot"></div>
           <div class="timeline-date">2024</div>
           <div class="timeline-content">
-            <h3>Proffesor's Assistant</h3>
-            <p>Conducted tutoring sessions in programming languages like Python, and Java.</p>
-            <p>Assisted in the implementation of materials tailored to students' skill levels.</p>
-            <p>Evaluated students' code and provided feedback to enhance programming proficiency.</p>
+            <h3>Proffesor"s Assistant at Metro State University</h3>
           </div>
       </div>
 
@@ -113,57 +121,44 @@
 
       <div class="projects-box">
         <div class="projects-info">
-          <h4>Online Food Ordering Database</h4>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-          Cupiditate officia voluptates similique. Cum quos sequi 
-          harum? Exercitationem reiciendis voluptatum voluptates 
-          minima repudiandae quaerat beatae ipsum! 
-          Tempora sunt voluptates maiores illo?</p>
-        </div>
-      </div>
-
-      <div class="projects-box">
-        <div class="projects-info">
           <h4>Code Review DAPP</h4>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-          Cupiditate officia voluptates similique. Cum quos sequi 
-          harum? Exercitationem reiciendis voluptatum voluptates 
-          minima repudiandae quaerat beatae ipsum! 
-          Tempora sunt voluptates maiores illo?</p>
+          <p>A DAPP where users could turn in code and have it reviewed buy three other users</p>
+          <p>This DAPP was created using the programming language Solidity</p>
         </div>
       </div>
 
       <div class="projects-box">
         <div class="projects-info">
           <h4>Movie Recommendation System</h4>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-          Cupiditate officia voluptates similique. Cum quos sequi 
-          harum? Exercitationem reiciendis voluptatum voluptates 
-          minima repudiandae quaerat beatae ipsum! 
-          Tempora sunt voluptates maiores illo?</p>
+          <p>This System was created using the programming language Java</p>
         </div>
       </div>
 
       <div class="projects-box">
         <div class="projects-info">
           <h4>Library Management System</h4>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Cupiditate officia voluptates similique. Cum quos sequi
-            harum? Exercitationem reiciendis voluptatum voluptates
-            minima repudiandae quaerat beatae ipsum!
-            Tempora sunt voluptates maiores illo?</p>
+          <p>This System was created using the programming language Java</p>
+        </div>
+      </div>
+
+      <div class="projects-box">
+        <div class="projects-info">
+          <h4>Food Ordering System</h4>
+          <p>This System was created using the programming language Java</p>
         </div>
       </div>
     </div>
+
   </section>
 
   <section class="pictures" id="pictures">
     <h2 class="heading">Pictures</h2>
     <div class="swiper">
       <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="1.jpg" alt=""></div>
-        <div class="swiper-slide"><img src="2.jpg" alt=""></div>
-        <div class="swiper-slide"><img src="image.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="1.jpg" alt="Olukole Solabi"></div>
+        <div class="swiper-slide"><img src="2.jpg" alt="Olukole Solabi"></div>
+        <div class="swiper-slide"><img src="3.jpg" alt="Olukole Solabi"></div>
+        <div class="swiper-slide"><img src="image.jpg" alt="Olukole Solabi"></div>
       </div>
       <div class="swiper-pagination"></div>
       <div class="swiper-button-prev"></div>
@@ -174,21 +169,24 @@
   <section class="contact" id="contact">
     <h2 class="heading">Contact <span>Me</span></h2>
 
-    <form id="contactForm" action="">
+    <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="a55f4fb7-bed2-4c4a-ac47-9c2c9511fcd5">
+      <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+      
       <div class="input-group">
         <div class="input-box">
-          <input type="text" placeholder="Full Name">
-          <input type="email" placeholder="Email">
+          <input type="text" name="name" placeholder="Full Name">
+          <input type="email" name="email" placeholder="Email">
         </div>
 
         <div class="input-box">
-          <input type="number" placeholder="Phone Number">
-          <input type="text" placeholder="Subject">
+          <input type="number" name="number" placeholder="Phone Number">
+          <input type="text" name="text" placeholder="Subject">
         </div>
       </div>
 
       <div class="input-group2">
-        <textarea name="" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
+        <textarea name="Message" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
         <input type="submit" value="Send Message" class="btn">
       </div>
     </form>
