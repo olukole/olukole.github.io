@@ -51,11 +51,11 @@ function downloadResume() {
   document.body.removeChild(link);
 }
 
-const form = document.getElementById('contactForm');
+/* const form = document.getElementById('contactForm');
 form.addEventListener('submit', function(event) {
   event.preventDefault();
   alert("Apologies. The form is currently down.");
-});
+}); */
 
 document.addEventListener("DOMContentLoaded", function() {
   var backToTopBtn = document.getElementById("backToTopBtn");
