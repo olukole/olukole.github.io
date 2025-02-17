@@ -9,11 +9,12 @@
   font-family: 'Poppins', sans-serif;
 }
 :root{
---main-color: #6495ed;
+--main-color: #00bcd4;
 --complementary-color: #edc964;
---bg-color: #d6e0f0;
+--bg-color: #121212;
 --second-bg-color: #b8c7e0;
---text-color: #1f2d3d;
+--text-color: #ffffff;
+--card-bg: #1e1e1e;
 }
 html{
   font-size: 60%;
@@ -22,6 +23,7 @@ html{
 body{
   background: var(--bg-color);
   color: var(--text-color);
+  font-family: 'Montserrat', sans-serif;
 }
 .header{
   position: fixed;
@@ -69,7 +71,7 @@ body{
   cursor: pointer;
 }
 section{
-  min-height: 100vh;
+  min-height: 70vh;
   padding: 10rem 12% 10rem;
 }
 .home {
@@ -224,7 +226,7 @@ span{
   }
   61%,
   80%{
-    content: "Graduate";
+    content: "Game Developer";
   }
   81%,
   100%{
@@ -258,87 +260,69 @@ span{
 }
 .heading{
   text-align: center;
-  font-size: 8rem;
-  margin: 5rem 0;
+  font-size: 3rem;
+  margin: 2rem 0;
 }
 .education{
-  padding: 100px 15px;
-  background: var(--second-bg-color);
+  padding: 20px 15px;
+  background: linear-gradient(135deg, #1e1e1e, #2a2a2a);
+  color: var(--text-color);
 }
 .education h2{
   margin-bottom: 5rem;
+  color: var(--main-color);
 }
 .timeline-items{
-  max-width: 1200px;
+  max-width: 800px;
   margin: auto;
   display: flex;
-  flex-wrap: wrap;
-  position: relative;
-}
-.timeline-items::before{
-  content: "";
-  position: absolute;
-  width: 5px;
-  height: 100%;
-  background: var(--main-color);
-  left: calc(50% - 1px);
+  flex-direction: column;
 }
 .timeline-item{
-  margin-bottom: 40px;
-  width: 100%;
+  margin-bottom: 20px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
   position: relative;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.timeline-item:last-child{
-  margin-bottom: 0;
-}
-.timeline-item:nth-child(odd){
-  padding-right: calc(50% + 30px);
-  text-align: right;
-}
-.timeline-item:nth-child(even){
-  padding-left: calc(50% + 30px);
+.timeline-item:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 .timeline-dot{
-  height: 21px;
-  width: 21px;
+  height: 30px;
+  width: 30px;
   background: var(--main-color);
-  box-shadow: 0 0 25px var(--main-color),
-              0 0 50px var(--main-color);
-  position: absolute;
-  left: calc(50% - 8px);
   border-radius: 50%;
-  top: 10px;
-}
-.timeline-date{
-  font-size: 20px;
-  font-weight: 800;
+  margin-right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: white;
-  margin: 6px 0 15px;
+  font-size: 1.5rem;
 }
 .timeline-content{
-  background-color: var(--bg-color);
-  border: 3px solid var(--main-color);
-  padding: 30px 50px;
-  border-radius: 4rem;
-  box-shadow: 0 0 10px var(--main-color);
-  cursor: pointer;
-  transition: 0.3s ease-in-out;
+  flex-grow: 1;
 }
-.timeline-content:hover{
-  transform: scale(1.05);
-  box-shadow: 0 0 25px var(--main-color);
+.timeline-date{
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--main-color);
+  margin-bottom: 5px;
 }
 .timeline-content h3{
-  margin: 0 0 10px;
-  font-size: 20px;
+  margin: 0;
+  font-size: 1.5rem;
   font-weight: 500;
-  color: black;
+  color: var(--text-color);
 }
 .timeline-content p{
-  font-size: 15px;
-  color: black;
-  line-height: 22px;
-  font-weight: 300;
+  font-size: 14px;
+  color: var(--text-color);
+  margin-top: 5px;
 }
 
 ::-webkit-scrollbar{
@@ -353,31 +337,28 @@ span{
 }
 .projects{
   background: var(--bg-color);
-  color: black;
+  color: var(--text-color);
 }
 .projects h2{
   margin-bottom: 5rem;
-  color: var(--text-color);
+  color: var(--main-color);
 }
 .projects-container{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  align-items: center;
-  gap: 2.5rem;
+  gap: 20px;
+  padding: 0 2rem;
 }
 .projects-box{
-  background-color: var(--main-color);
-  height: 300px;
-  border-radius: 3rem;
-  border: 5px solid transparent;
-  cursor: pointer;
-  transition: 0.4s ease-in-out;
+  background-color: rgba(30, 30, 30, 0.8);
+  border-radius: 10px;
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 .projects-box:hover{
-  background: white;
-  color: black;
-  border: 5px solid var(--main-color);
-  transform: scale(1.03);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
 }
 .projects-box .projects-info{
   display: flex;
@@ -389,43 +370,47 @@ span{
   padding: 5rem 5rem;
 }
 .projects-info h4{
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 800;
-  line-height: 2;
+  line-height: 1.5;
   margin-bottom: 1rem;
+  color: var(--text-color);
 }
 .projects-info p{
-  font-size: 1.6rem;
-  font-weight: 600;
+  font-size: 1.4rem;
+  font-weight: 400;
   line-height: 1.7;
   max-height: 100px;
   margin: auto;
+  color: var(--text-color);
 }
 
-.pictures{
-  background: var(--second-bg-color);
+.pictures {
+    background: linear-gradient(135deg, #1e1e1e, #2a2a2a);
+    color: var(--text-color);
 }
 .pictures.heading{
   margin-bottom: 5rem;
 }
 
-.swiper{
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  width: 100%;
-  max-width: 100rem;
-  height: auto;
-  aspect-ratio: 1 / 1;
-  border: 3px solid var(--main-color);
-  box-shadow: 0 0 25px var(--main-color);
+.swiper {
+    width: 100%;
+    height: 100%;
+    max-width: 100rem;
+    aspect-ratio: 16 / 9;
+    border: 3px solid var(--main-color);
+    box-shadow: 0 0 25px var(--main-color);
 }
-.swiper-slide img{
-  width: 100%;
-  height: auto;
-  object-fit: cover;
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.swiper-slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 .swiper .swiper-button-next, 
 .swiper .swiper-button-prev{
