@@ -1,4 +1,3 @@
- 
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
 let sections = document.querySelectorAll('section');
@@ -23,6 +22,7 @@ window.onscroll = () => {
 menuIcon.onclick = () => {
   menuIcon.classList.toggle('bx-x');
   navbar.classList.toggle('active');
+  document.body.classList.toggle('no-scroll');
 }
 
 window.onload = function() {
@@ -44,8 +44,8 @@ window.onload = function() {
 }
 function downloadResume() {
   const link = document.createElement('a');
-  link.href = 'https://github.com/olukole/olukole.github.io/raw/main/-Resume.pdf';
-  link.download = '-Resume.pdf';
+  link.href = 'https://github.com/olukole/olukole.github.io/raw/main/Resume.pdf';
+  link.download = 'Resume.pdf';
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
