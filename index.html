@@ -1,234 +1,352 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-7B7QV1RWB0"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-<head>
+      gtag("config", "G-7B7QV1RWB0");
+    </script>
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7B7QV1RWB0"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Olukole's Portfolio</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-    gtag('config', 'G-7B7QV1RWB0');
-  </script>
+  <body>
+    <header class="header">
+      <a href="#home" class="logo"
+        >Olukole
+        <span>Solabi</span>
+      </a>
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Olukole's Portfolio</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-</head>
+      <i class="bx bx-menu" id="menu-icon"></i>
 
-<body>
-  <header class="header">
-    <a href="#home" class="logo">Olukole
-      <span>Solabi</span>
-    </a>
-
-    <i class='bx bx-menu' id="menu-icon"></i>
-
-    <nav class="navbar">
-      <a href="#home" class="active">Home</a>
-      <a href="#education">Education</a>
-      <a href="#projects">Projects</a>
-      <a href="#pictures">Pictures</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-
-  <section class="home" id="home">
-    <div class="home-content">
-      <h1>Hi i'm Olukole <span>Solabi</span></h1>
-      <h3 class="text-animation">A <span></span></h3>
-      <p>Pursuing a master's degree in computer science with
-        experience in projects relating to developing, debugging,
-        and testing software. I am skilled in Java, JavaScript,
-        HTML, CSS, and SQL Python, C++, and others.</p>
-
-      <div class="social-icons">
-        <a href="https://www.linkedin.com/in/olukole/" target="_blank"><i class='bx bxl-linkedin'></i></a>
-        <a href="https://github.com/olukole" target="_blank"><i class='bx bxl-github'></i></a>
-        <a href="https://www.instagram.com/kolino11/" target="_blank"><i class='bx bxl-instagram'></i></a>
-      </div>
-
-      <div class="btn-group">
-        <a href="#projects" class="btn">Projects</a>
-        <a href="#contact" class="btn">Contact</a>
-        <a class="btn" onclick="downloadResume()">Resume</a>
-      </div>
-    </div>
-
-    <div class="home-img">
-      <img src="assets/images/dp.jpg" alt="">
-    </div>
-  </section>
-
-  <section class="education" id="education">
-    <h2 class="heading">Education</h2>
-    <div class="timeline-items">
-        <div class="timeline-item">
-            <div class="timeline-dot"><i class='bx bxs-graduation'></i></div>
-            <div class="timeline-content">
-                <div class="timeline-date">2019</div>
-                <h3>Bachelor of Computer Science</h3>
-                <p>Metro State University</p>
-            </div>
-        </div>
-
-        <div class="timeline-item">
-            <div class="timeline-dot"><i class='bx bxs-briefcase'></i></div>
-            <div class="timeline-content">
-                <div class="timeline-date">2022</div>
-                <h3>Email Automation Specialist Intern</h3>
-                <p>Trinity</p>
-            </div>
-        </div>
-
-        <div class="timeline-item">
-            <div class="timeline-dot"><i class='bx bxs-user'></i></div>
-            <div class="timeline-content">
-                <div class="timeline-date">2024</div>
-                <h3>Professor's Assistant</h3>
-                <p>Metro State University</p>
-            </div>
-        </div>
-
-        <div class="timeline-item">
-            <div class="timeline-dot"><i class='bx bxs-graduation'></i></div>
-            <div class="timeline-content">
-                <div class="timeline-date">2025</div>
-                <h3>Master of Computer Science</h3>
-                <p>Metro State University</p>
-            </div>
-        </div>
-    </div>
-  </section>
-
-  <section class="projects" id="projects">
-    <h2 class="heading">Projects</h2>
-    <div class="projects-container">
-        <div class="projects-box">
-            <div class="projects-info">
-                <h4>College Simulator</h4>
-                <p>Developed a game with a fully functioning dorm Sytem. The Student could enroll for a class, get a job, and had access to the store system.This game was created using the programming language C++</p>
-            </div>
-        </div>
-        <div class="projects-box">
-            <div class="projects-info">
-                <h4>Code Review DAPP</h4>
-                <p>A DAPP where users could turn in code and have it reviewed by other users.This DAPP was created using the programming language Solidity</p>
-            </div>
-        </div>
-        <div class="projects-box">
-            <div class="projects-info">
-                <h4>Movie Recommendation System</h4>
-                <p>It is a system that recommends movies to users based on what they like.</p>
-            </div>
-        </div>
-        <div class="projects-box">
-            <div class="projects-info">
-                <h4>Library Management System</h4>
-                <p>It is a system that allows users to check what books they borrowed, what books they returned and what books are available.</p>
-            </div>
-        </div>
-        <div class="projects-box">
-          <div class="projects-info">
-            <h4>E-commerce Food Website</h4>
-            <p>It is a system that allows users to choose what food and the qunatity they want to order online. It contains a functioning checkout system based on the Stripe API.</p>
-          </div>
-        </div>
-        <div class="projects-box">
-          <div class="projects-info">
-            <h4>Dragon Tap</h4>
-            <p>A 2D mobile game created using Unity, where the player taps the screen to move and avoid obstacles.</p>
-          </div>
-        </div>
-    </div>
-  </section>
-
-  <section class="pictures" id="pictures">
-    <h2 class="heading">Pictures</h2>
-    <div class="swiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="assets/images/display1.jpg" alt="Olukole Solabi"></div>
-        <div class="swiper-slide"><img src="assets/images/display2.jpg" alt="Olukole Solabi"></div>
-        <div class="swiper-slide"><img src="assets/images/display3.jpg" alt="Olukole Solabi"></div>
-        <div class="swiper-slide"><img src="assets/images/display4.jpg" alt="Olukole Solabi"></div>
-        <div class="swiper-slide"><img src="assets/images/display5.jpg" alt="Olukole Solabi"></div>
-        <div class="swiper-slide"><img src="assets/images/display6.jpg" alt="Olukole Solabi"></div>
-        <div class="swiper-slide"><img src="assets/images/display7.jpg" alt="Olukole Solabi"></div>
-      </div>
-      <div class="swiper-pagination"></div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
-    </div>
-  </section>
-
-  <section class="contact" id="contact">
-    <h2 class="heading">Contact <span>Me</span></h2>
-
-    <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
-      <input type="hidden" name="access_key" value="a55f4fb7-bed2-4c4a-ac47-9c2c9511fcd5">
-      <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-
-      <div class="input-group">
-        <div class="input-box">
-          <input type="text" name="name" placeholder="Full Name">
-          <input type="email" name="email" placeholder="Email">
-        </div>
-
-        <div class="input-box">
-          <input type="number" name="number" placeholder="Phone Number">
-          <input type="text" name="text" placeholder="Subject">
-        </div>
-      </div>
-
-      <div class="input-group2">
-        <textarea name="Message" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
-        <input type="submit" value="Send Message" class="btn">
-      </div>
-    </form>
-  </section>
-
-  <footer class="footer">
-    <div class="social">
-      <a href="https://www.linkedin.com/in/olukole/" target="_blank"><i class='bx bxl-linkedin'></i></a>
-      <a href="https://github.com/olukole" target="_blank"><i class='bx bxl-github'></i></a>
-      <a href="https://www.instagram.com/kolino11/" target="_blank"><i class='bx bxl-instagram'></i></a>
-    </div>
-
-    <ul class="list">
-      <li>
-        <a href="#home">Home</a>
-      </li>
-
-      <li>
-        <a href="#education">Education</a>
-      </li>
-
-      <li>
+      <nav class="navbar">
+        <a href="#home" class="active">Home</a>
         <a href="#projects">Projects</a>
-      </li>
-
-      <li>
         <a href="#pictures">Pictures</a>
-      </li>
-
-      <li>
+        <a href="#education">Education</a>
         <a href="#contact">Contact</a>
-      </li>
-    </ul>
-    <p class="copyright">
-      © Olukole Solabi | All rights reserved
-    </p>
-  </footer>
+      </nav>
+    </header>
 
-  <button id="backToTopBtn" title="Go to top"><i class='bx bxs-chevron-up-circle'></i></button>
-  <script src="assets/js/script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-</body>
+    <section class="home" id="home">
+      <div class="home-content">
+        <h1>Hi i'm Olukole <span>Solabi</span></h1>
+        <h3 class="text-animation">A <span></span></h3>
+        <p>
+          Pursuing a master's degree in computer science with experience in
+          projects relating to developing, debugging, and testing software. I am
+          skilled in Java, JavaScript, HTML, CSS, and SQL Python, C++, and
+          others.
+        </p>
 
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/olukole/" target="_blank"
+            ><i class="bx bxl-linkedin"></i
+          ></a>
+          <a href="https://github.com/olukole" target="_blank"
+            ><i class="bx bxl-github"></i
+          ></a>
+          <!-- <a href="https://www.instagram.com/kolino11/" target="_blank"
+            ><i class="bx bxl-instagram"></i
+          ></a> -->
+        </div>
+
+        <div class="btn-group">
+          <a href="#projects" class="btn">Projects</a>
+          <a href="#contact" class="btn">Contact</a>
+          <a class="btn" onclick="downloadResume()">Resume</a>
+        </div>
+      </div>
+
+      <div class="home-img">
+        <img src="assets/images/dp.jpg" alt="" />
+      </div>
+    </section>
+
+    <section class="projects" id="projects">
+      <h2 class="heading">Projects</h2>
+      <div class="projects-container">
+        <div class="projects-box">
+          <div class="projects-info-front">
+            <h4>E-commerce Food Website</h4>
+            <a href="https://bellachow.biz" target="_blank"
+              ><i class="bx bxs-store"></i>
+            </a>
+          </div>
+          <div class="projects-info-back">
+            <h4>E-commerce Food Website</h4>
+            <p>
+              It is a system that allows users to choose what food and the
+              qunatity they want to order online. It contains a functioning
+              checkout system based on the Stripe API.
+            </p>
+          </div>
+        </div>
+        <div class="projects-box">
+          <div class="projects-info-front">
+            <h4>Dragon Tap</h4>
+            <!-- <a href="https://github.com/olukole" target="_blank"
+              ><i class="bx bxl-play-store"></i>
+            </a> -->
+          </div>
+          <div class="projects-info-back">
+            <h4>Dragon Tap</h4>
+            <p>
+              A 2D mobile game created using Unity, where the player taps the
+              screen to move and avoid obstacles.
+            </p>
+          </div>
+        </div>
+        <div class="projects-box">
+          <div class="projects-info-front">
+            <h4>Movie Recommendation System</h4>
+            <!-- <a href="https://github.com/olukole" target="_blank"
+              ><i class="bx bxl-github"></i>
+            </a> -->
+          </div>
+          <div class="projects-info-back">
+            <h4>Movie Recommendation System</h4>
+            <p>
+              It is a system that recommends movies to users based on what they
+              like.This system was created using the programming language
+              Python.
+            </p>
+          </div>
+        </div>
+        <div class="projects-box">
+          <div class="projects-info-front">
+            <h4>Library Management System</h4>
+            <!-- <a href="https://github.com/olukole" target="_blank"
+              ><i class="bx bxl-github"></i>
+            </a> -->
+          </div>
+          <div class="projects-info-back">
+            <h4>Library Management System</h4>
+            <p>
+              It is a system that allows users to check what books they
+              borrowed, what books they returned and what books are available.
+            </p>
+          </div>
+        </div>
+        <div class="projects-box">
+          <div class="projects-info-front">
+            <h4>College Simulator</h4>
+            <!-- <a href="https://github.com/olukole" target="_blank"
+              ><i class="bx bxl-github"></i>
+            </a> -->
+          </div>
+          <div class="projects-info-back">
+            <h4>College Simulator</h4>
+            <p>
+              Developed a game with a fully functioning dorm Sytem. The Student
+              could enroll for a class, get a job, and had access to the store
+              system.This game was created using the programming language C++
+            </p>
+          </div>
+        </div>
+        <div class="projects-box">
+          <div class="projects-info-front">
+            <h4>Code Review DAPP</h4>
+            <!-- <a href="https://github.com/olukole" target="_blank"
+              ><i class="bx bxl-github"></i>
+            </a> -->
+          </div>
+          <div class="projects-info-back">
+            <h4>Code Review DAPP</h4>
+            <p>
+              A DAPP where users could turn in code and have it reviewed by
+              other users.This DAPP was created using the programming language
+              Solidity
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pictures" id="pictures">
+      <h2 class="heading">Pictures</h2>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="assets/images/display1.jpg" alt="Olukole Solabi" />
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/images/display2.jpg" alt="Olukole Solabi" />
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/images/display3.jpg" alt="Olukole Solabi" />
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/images/display4.jpg" alt="Olukole Solabi" />
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/images/display5.jpg" alt="Olukole Solabi" />
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/images/display6.jpg" alt="Olukole Solabi" />
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/images/display7.jpg" alt="Olukole Solabi" />
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </section>
+
+    <section class="education" id="education">
+      <h2 class="heading">Education</h2>
+      <div class="timeline-items">
+        <div class="timeline-item">
+          <div class="timeline-dot"><i class="bx bxs-graduation"></i></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2019</div>
+            <h3>Bachelor of Computer Science</h3>
+            <p>Metro State University</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"><i class="bx bxs-briefcase"></i></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2022</div>
+            <h3>Email Automation Specialist Intern</h3>
+            <p>Trinity</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"><i class="bx bxs-user"></i></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2024</div>
+            <h3>Professor's Assistant</h3>
+            <p>Metro State University</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"><i class="bx bxs-graduation"></i></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2025</div>
+            <h3>Master of Computer Science</h3>
+            <p>Metro State University</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2 class="heading">Contact <span>Me</span></h2>
+
+      <form
+        id="contactForm"
+        action="https://api.web3forms.com/submit"
+        method="POST"
+      >
+        <input
+          type="hidden"
+          name="access_key"
+          value="a55f4fb7-bed2-4c4a-ac47-9c2c9511fcd5"
+        />
+        <input
+          type="checkbox"
+          name="botcheck"
+          class="hidden"
+          style="display: none"
+        />
+
+        <div class="input-group">
+          <div class="input-box">
+            <input type="text" name="name" placeholder="Full Name" />
+            <input type="email" name="email" placeholder="Email" />
+          </div>
+
+          <div class="input-box">
+            <input type="number" name="number" placeholder="Phone Number" />
+            <input type="text" name="text" placeholder="Subject" />
+          </div>
+        </div>
+
+        <div class="input-group2">
+          <textarea
+            name="Message"
+            id=""
+            cols="30"
+            rows="10"
+            placeholder="Your Message"
+            required
+          ></textarea>
+          <input type="submit" value="Send Message" class="btn" />
+        </div>
+      </form>
+    </section>
+
+    <footer class="footer">
+      <div class="social">
+        <a href="https://www.linkedin.com/in/olukole/" target="_blank"
+          ><i class="bx bxl-linkedin"></i
+        ></a>
+        <a href="https://github.com/olukole" target="_blank"
+          ><i class="bx bxl-github"></i
+        ></a>
+        <!-- <a href="https://www.instagram.com/kolino11/" target="_blank"
+          ><i class="bx bxl-instagram"></i
+        ></a> -->
+      </div>
+
+      <ul class="list">
+        <li>
+          <a href="#home">Home</a>
+        </li>
+
+        <li>
+          <a href="#projects">Projects</a>
+        </li>
+
+        <li>
+          <a href="#pictures">Pictures</a>
+        </li>
+
+        <li>
+          <a href="#education">Education</a>
+        </li>
+
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
+      <p class="copyright">© Olukole Solabi | All rights reserved</p>
+    </footer>
+
+    <button id="backToTopBtn" title="Go to top">
+      <i class="bx bxs-chevron-up-circle"></i>
+    </button>
+    <script src="assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </body>
 </html>
