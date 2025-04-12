@@ -511,7 +511,7 @@ span{
 }
 
 .contact{
-  background: var(--bg-color);
+  background: var(--third-bg-color);
 }
 .contact h2{
   margin-bottom: 3rem;
