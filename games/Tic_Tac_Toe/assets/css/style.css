@@ -1,0 +1,276 @@
+/* Color Variables and Theme Settings */
+:root {
+  --main-color: #00bcd4;
+  /* Cyan - Primary accent color */
+  --complementary-color: #edc964;
+  /* Gold - Secondary accent color */
+  --bg-color: #121212;
+  /* Dark background */
+  --second-bg-color: #b8c7e0;
+  /* Light blue - Alternative background */
+  --third-bg-color: linear-gradient(135deg, #1e1e1e, #2a2a2a);
+  /* Gradient for cards */
+  --text-color: #ffffff;
+  /* White text */
+}
+
+/* Basic Page Setup */
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Main Grid Layout */
+.game-layout {
+  display: grid;
+  grid-template-columns: 300px 1fr 300px;
+  /* Left sidebar, main content, right sidebar */
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+/* Main Content Area Styling */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Sidebar Sections Styling */
+.side-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Information Cards in Sidebars */
+.info-card {
+  background: var(--third-bg-color);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.info-card h2 {
+  color: var(--main-color);
+  margin: 0 0 15px 0;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+/* Instructions List Styling */
+.instructions-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.instructions-list li {
+  margin-bottom: 12px;
+  padding-left: 24px;
+  position: relative;
+  line-height: 1.4;
+}
+
+/* Custom Bullet Points */
+.instructions-list li::before {
+  content: "•";
+  color: var(--complementary-color);
+  position: absolute;
+  left: 8px;
+  font-size: 18px;
+}
+
+/* Game Board Container */
+.game-container {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  /* 3x3 grid for game board */
+  gap: 10px;
+  margin: 20px auto;
+  padding: 20px;
+  background: var(--third-bg-color);
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Individual Cell Styling */
+.cell {
+  width: 100px;
+  height: 100px;
+  border: 2px solid var(--main-color);
+  border-radius: 10px;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+/* Cell Hover Effects */
+.cell:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Game Status Display */
+.status {
+  text-align: center;
+  font-size: 24px;
+  margin: 20px;
+  padding: 15px;
+  background: var(--third-bg-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: var(--text-color);
+}
+
+/* Button Container Layout */
+.button-container {
+  display: flex;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+/* Button Styling */
+.restart-btn,
+.name-btn,
+.home-btn {
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Button Color Variants */
+.name-btn {
+  background-color: var(--main-color);
+  color: var(--text-color);
+}
+
+.restart-btn {
+  background-color: var(--complementary-color);
+  color: var(--bg-color);
+}
+
+.home-btn {
+  background-color: #4CAF50;
+  color: var(--text-color);
+}
+
+/* Button Hover Effects */
+.name-btn:hover,
+.restart-btn:hover,
+.home-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  filter: brightness(110%);
+}
+
+/* Player Markers (X and O) */
+.x-mark {
+  color: var(--main-color);
+  text-shadow: 0 0 10px rgba(0, 188, 212, 0.5);
+}
+
+.o-mark {
+  color: var(--complementary-color);
+  text-shadow: 0 0 10px rgba(237, 201, 100, 0.5);
+}
+
+/* Score Section Styling */
+.score-section {
+  max-width: 400px;
+  margin: 30px auto;
+  padding: 20px;
+  background: var(--third-bg-color);
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.score-section h2 {
+  color: var(--main-color);
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Score Table Styling */
+.score-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Table Cell Styling */
+.score-table th,
+.score-table td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Vertical Separator in Table */
+.score-table td:first-child,
+.score-table th:first-child {
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Table Header Styling */
+.score-table th {
+  background-color: rgba(0, 188, 212, 0.2);
+  color: var(--main-color);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Table Row Styling */
+.score-table tr:last-child td {
+  border-bottom: none;
+}
+
+.score-table tr:hover td {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Responsive Design for Mobile Devices */
+@media (max-width: 1200px) {
+  .game-layout {
+    grid-template-columns: 1fr;
+    /* Stack all sections vertically */
+    gap: 20px;
+  }
+
+  .side-section {
+    order: 2;
+    /* Move sidebars below main content */
+  }
+
+  .main-content {
+    order: 1;
+    /* Keep game board at top on mobile */
+  }
+}

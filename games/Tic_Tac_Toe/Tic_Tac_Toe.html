@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!-- HTML5 declaration -->
+<html lang="en">
+  <head>
+    <!-- Meta tags and document setup -->
+    <meta charset="UTF-8" />
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="/games/Tic_Tac_Toe/assets/css/style.css" />
+    <title>Tic Tac Toe</title>
+  </head>
+  <body>
+    <!-- Main game layout wrapper -->
+    <div class="game-layout">
+      <!-- Left sidebar with game instructions -->
+      <div class="side-section left-section">
+        <!-- How to Play card -->
+        <div class="info-card">
+          <h2>How to Play</h2>
+          <ul class="instructions-list">
+            <!-- Basic game rules -->
+            <li>
+              Players take turns placing their mark (X or O) in empty cells
+            </li>
+            <li>Get three of your marks in a row to win</li>
+            <li>A row can be horizontal, vertical, or diagonal</li>
+            <li>If all cells are filled with no winner, the game is a draw</li>
+          </ul>
+        </div>
+        <!-- Controls explanation card -->
+        <div class="info-card">
+          <h2>Controls</h2>
+          <ul class="instructions-list">
+            <!-- Button functionality explanation -->
+            <li>Click "Set Player Names" to customize player names</li>
+            <li>Click "New Game" to start a fresh game</li>
+            <li>Click "Reset Scores" to clear game history</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Main game content area -->
+      <div class="main-content">
+        <!-- Top button controls -->
+        <div class="button-container">
+          <!-- Home button -->
+          <button
+            class="home-btn"
+            onclick="window.location.href='../../index.html'"
+          >
+            Home
+          </button>
+          <!-- Player name customization button -->
+          <button class="name-btn" onclick="setPlayerNames()">
+            Set Player Names
+          </button>
+          <!-- Score reset button -->
+          <button class="restart-btn" onclick="resetScores()">
+            Reset Scores
+          </button>
+        </div>
+
+        <!-- Current player status display -->
+        <div class="status">Current Player: X</div>
+
+        <!-- Game board grid -->
+        <div class="game-container" id="board">
+          <!-- Game cells (0-8) representing the 3x3 grid -->
+          <div class="cell" data-index="0"></div>
+          <div class="cell" data-index="1"></div>
+          <div class="cell" data-index="2"></div>
+          <div class="cell" data-index="3"></div>
+          <div class="cell" data-index="4"></div>
+          <div class="cell" data-index="5"></div>
+          <div class="cell" data-index="6"></div>
+          <div class="cell" data-index="7"></div>
+          <div class="cell" data-index="8"></div>
+        </div>
+
+        <!-- Game history section -->
+        <div class="score-section">
+          <h2>Game History</h2>
+          <!-- Score tracking table -->
+          <table class="score-table">
+            <thead>
+              <tr>
+                <th>Game</th>
+                <th>Winner</th>
+              </tr>
+            </thead>
+            <!-- Dynamic score history container -->
+            <tbody id="score-history">
+              <!-- Score history will be populated by JavaScript -->
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Bottom game control -->
+        <div class="button-container">
+          <!-- New game button -->
+          <button class="restart-btn" onclick="restartGame()">New Game</button>
+        </div>
+      </div>
+
+      <!-- Right sidebar with additional game information -->
+      <div class="side-section right-section">
+        <!-- Game rules card -->
+        <div class="info-card">
+          <h2>Game Rules</h2>
+          <ul class="instructions-list">
+            <!-- Detailed game rules -->
+            <li>X always goes first</li>
+            <li>Players cannot place marks in filled cells</li>
+            <li>Game ends when there's a winner or a draw</li>
+            <li>Last 5 games are shown in history</li>
+          </ul>
+        </div>
+        <!-- Strategy tips card -->
+        <div class="info-card">
+          <h2>Tips</h2>
+          <ul class="instructions-list">
+            <!-- Strategic gameplay advice -->
+            <li>Try to block your opponent's winning moves</li>
+            <li>Control the center cell when possible</li>
+            <li>Watch for diagonal winning opportunities</li>
+            <li>Plan two moves ahead</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Link to game logic JavaScript file -->
+    <script src="/games/Tic_Tac_Toe/assets/js/script.js"></script>
+  </body>
+</html>
